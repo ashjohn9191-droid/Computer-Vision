@@ -1,0 +1,156 @@
+
+
+---
+
+# 🎥 Real-Time Face & Eye Detection using OpenCV (HAAR Cascade)
+
+## 📌 Project Overview
+
+This project performs **real-time face and eye detection** using OpenCV and Haar Cascade Classifiers.
+
+It captures frames from a **webcam or video file**, detects faces, and then detects eyes within each detected face. Rectangles are drawn around faces and eyes in real-time.
+
+This is a classic **Computer Vision + Video Processing** project.
+
+---
+
+## 🚀 Technologies Used
+
+* Python 🐍
+* OpenCV
+* HAAR Cascade Classifiers
+* NumPy
+
+---
+
+## 🧠 How It Works
+
+1. Load Haar cascade XML files:
+
+   * `haarcascade_frontalface_default.xml`
+   * `haarcascade_eye.xml`
+2. Start video capture (webcam or video file).
+3. Read frames continuously.
+4. Convert each frame to grayscale.
+5. Detect faces using `detectMultiScale()`.
+6. For each detected face:
+
+   * Define Region of Interest (ROI).
+   * Detect eyes inside the face.
+7. Draw:
+
+   * 🔵 Blue rectangle → Face
+   * 🟢 Green rectangle → Eyes
+8. Press **'q'** to exit the program.
+
+---
+
+## 📂 Project Structure
+
+```
+RealTime-Face-Eye-Detection/
+│
+├── face_eye_video_detection.py
+├── haarcascade_frontalface_default.xml
+├── haarcascade_eye.xml
+├── sample_video.mp4 (optional)
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Install Required Libraries
+
+```bash
+pip install opencv-python numpy
+```
+
+### 2️⃣ Download Haar Cascade Files
+
+Download from OpenCV GitHub:
+[https://github.com/opencv/opencv/tree/master/data/haarcascades](https://github.com/opencv/opencv/tree/master/data/haarcascades)
+
+Place both XML files in your project folder.
+
+---
+
+## ▶️ How to Run
+
+If using webcam:
+
+```python
+video_capture = cv2.VideoCapture(0)
+```
+
+If using video file:
+
+```python
+video_capture = cv2.VideoCapture("sample_video.mp4")
+```
+
+Then run:
+
+```bash
+python face_eye_video_detection.py
+```
+
+---
+
+## 🎯 Features
+
+✔ Real-time detection
+✔ Works with webcam or video file
+✔ Detects multiple faces
+✔ Detects multiple eyes per face
+✔ Exit using 'q' key
+✔ Lightweight and fast
+
+---
+
+## 🔍 Key Detection Parameters
+
+```python
+faces = face_cascade.detectMultiScale(
+    gray,
+    scaleFactor=1.1,
+    minNeighbors=6,
+    minSize=(30, 30),
+    flags=cv2.CASCADE_SCALE_IMAGE
+)
+```
+
+* **scaleFactor** → Controls image scaling
+* **minNeighbors** → Reduces false positives
+* **minSize** → Minimum detectable face size
+
+---
+
+## 🖥 Output
+
+* Live video window opens
+* Faces detected with Blue boxes
+* Eyes detected with Green boxes
+* Press **q** to exit
+
+---
+
+## 🚀 Future Improvements
+
+* Smile detection
+* Face recognition
+* Emotion detection
+* Mask detection
+* Object tracking integration
+* Deep learning-based detection (DNN / YOLO)
+
+---
+
+## 👩‍💻 Author
+
+**Ashley**
+
+Interested in Computer Vision & Deep Learning
+
+--
