@@ -1,0 +1,156 @@
+
+
+# 🎥 Multiple Face & Eye Detection in Video using OpenCV
+
+## 📌 Project Overview
+
+This project implements **Multiple Face and Eye Detection** on a video file using **Haar Cascade Classifiers** in OpenCV.
+
+The system processes video frames in real-time, detects **all visible faces**, and then detects **eyes within each detected face region**.
+
+It demonstrates practical usage of classical Computer Vision techniques for multi-object detection in video streams.
+
+---
+
+## 🚀 Technologies Used
+
+* Python 🐍
+* OpenCV
+* Haar Cascade Classifiers
+* NumPy
+
+---
+
+## 🧠 How It Works
+
+1. Load Haar Cascade XML files for:
+
+   * Face detection
+   * Eye detection
+
+2. Open a video file using `cv2.VideoCapture()`.
+
+3. Read frames continuously.
+
+4. Convert each frame to grayscale.
+
+5. Detect multiple faces using:
+
+   ```python
+   detectMultiScale()
+   ```
+
+6. For each detected face:
+
+   * Draw blue bounding box around face
+   * Extract Region of Interest (ROI)
+   * Detect eyes inside the face
+   * Draw green bounding boxes around eyes
+
+7. Press **'q'** to exit the program.
+
+---
+
+## 📂 Project Structure
+
+```
+Multiple-Face-Eye-Detection/
+│
+├── multiple_face_eye_detection.py
+├── haarcascade_frontalface_default.xml
+├── haarcascade_eye.xml
+├── sample_video.mp4
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Install Required Libraries
+
+```bash
+pip install opencv-python numpy
+```
+
+### 2️⃣ Download Haar Cascade Files
+
+Download from OpenCV official repository:
+
+[https://github.com/opencv/opencv/tree/master/data/haarcascades](https://github.com/opencv/opencv/tree/master/data/haarcascades)
+
+Place both XML files inside your project folder.
+
+---
+
+## ▶️ How to Run
+
+Update the video path in the script:
+
+```python
+video_capture = cv2.VideoCapture("sample_video.mp4")
+```
+
+Run the project:
+
+```bash
+python multiple_face_eye_detection.py
+```
+
+Press **q** to stop execution.
+
+---
+
+## 🔍 Detection Parameters
+
+```python
+scaleFactor = 1.1
+minNeighbors = 6
+minSize = (30, 30)
+```
+
+* **scaleFactor** → Controls image scaling
+* **minNeighbors** → Reduces false positives
+* **minSize** → Minimum detectable face size
+
+---
+
+## 🎯 Key Features
+
+✔ Detects multiple faces in each frame
+✔ Detects multiple eyes per face
+✔ Works with video files
+✔ Real-time processing
+✔ Clean and modular function design
+✔ Easy to extend to webcam input
+
+---
+
+## 💡 Applications
+
+* Surveillance systems
+* Attendance monitoring
+* Human detection systems
+* Security applications
+* Preprocessing step for Face Recognition
+
+---
+
+## 🚀 Future Enhancements
+
+* Real-time webcam support
+* Smile detection
+* Emotion detection
+* Face recognition system
+* Deep learning-based detection (DNN / YOLO)
+
+---
+
+## 👩‍💻 Author
+
+**Ashley**
+
+Aspiring AI / ML Engineer
+Interested in Computer Vision & Deep Learning
+
+--
