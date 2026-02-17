@@ -1,0 +1,148 @@
+
+
+---
+
+# 🚗 Car Detection in Video using OpenCV (Haar Cascade)
+
+## 📌 Project Overview
+
+This project implements **Car Detection in Video** using the Haar Cascade Classifier in OpenCV.
+
+The system processes each frame of a video file, detects multiple cars, and draws bounding boxes around detected vehicles in real-time.
+
+It demonstrates classical object detection using traditional Computer Vision techniques.
+
+---
+
+## 🚀 Technologies Used
+
+* Python 🐍
+* OpenCV
+* Haar Cascade Classifier
+* NumPy
+
+---
+
+## 🧠 How It Works
+
+1. Load the `haarcascade_car.xml` classifier.
+
+2. Open the input video file using `cv2.VideoCapture()`.
+
+3. Read frames continuously.
+
+4. Convert each frame to grayscale.
+
+5. Detect cars using:
+
+   ```python
+   detectMultiScale()
+   ```
+
+6. Draw bounding boxes around detected vehicles.
+
+7. Press **Enter key** to exit the program.
+
+---
+
+## 📂 Project Structure
+
+```
+Car-Detection/
+│
+├── car_detection.py
+├── haarcascade_car.xml
+├── sample_video.mp4
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Install Required Libraries
+
+```bash
+pip install opencv-python numpy
+```
+
+### 2️⃣ Download Car Haar Cascade File
+
+You need:
+
+```
+haarcascade_car.xml
+```
+
+Place it inside your project folder.
+
+---
+
+## ▶️ How to Run
+
+Update the video path inside the script:
+
+```python
+video_path = "sample_video.mp4"
+```
+
+Run the program:
+
+```bash
+python car_detection.py
+```
+
+Press **Enter key** to stop execution.
+
+---
+
+## 🔍 Detection Parameters Used
+
+```python
+scaleFactor = 1.1
+minNeighbors = 3
+minSize = (30, 30)
+```
+
+* **scaleFactor** → Controls image scaling during detection
+* **minNeighbors** → Reduces false detections
+* **minSize** → Minimum size of detectable car
+
+---
+
+## 🎯 Key Features
+
+✔ Detects multiple cars in video
+✔ Real-time frame processing
+✔ Error handling for invalid file paths
+✔ Lightweight implementation
+✔ Beginner-friendly project
+
+---
+
+## 💡 Applications
+
+* Traffic monitoring systems
+* Smart city surveillance
+* Vehicle counting systems
+* Parking lot monitoring
+* Traffic analysis
+
+---
+
+## 🚀 Future Enhancements
+
+* Vehicle counting system
+* Speed estimation
+* Lane detection integration
+* Real-time webcam car detection
+* Deep Learning-based detection (YOLO / SSD / DNN)
+
+---
+
+## 👩‍💻 Author
+
+**Ashley**
+Aspiring AI / ML Engineer
+Interested in Computer Vision & Deep Learning
+
