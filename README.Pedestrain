@@ -1,0 +1,153 @@
+
+
+---
+
+# 🚶 Pedestrian (Full Body) Detection in Video using OpenCV
+
+## 📌 Project Overview
+
+This project implements **Pedestrian Detection (Full Body Detection)** in a video file using **Haar Cascade Classifier** in OpenCV.
+
+The system processes each video frame, detects multiple human bodies, and draws bounding boxes around detected pedestrians in real-time.
+
+This project demonstrates practical implementation of **Video Processing + Object Detection using classical Computer Vision techniques**.
+
+---
+
+## 🚀 Technologies Used
+
+* Python 🐍
+* OpenCV
+* NumPy
+* Haar Cascade Classifier
+
+---
+
+## 🧠 How It Works
+
+1. Load the `haarcascade_fullbody.xml` classifier.
+
+2. Open the input video file using `cv2.VideoCapture()`.
+
+3. Read frames one by one.
+
+4. Convert each frame to grayscale.
+
+5. Detect full human bodies using:
+
+   ```python
+   detectMultiScale()
+   ```
+
+6. Draw bounding boxes around detected pedestrians.
+
+7. Press **Enter key** to exit the program.
+
+---
+
+## 📂 Project Structure
+
+```
+Pedestrian-Detection/
+│
+├── pedestrian_detection.py
+├── haarcascade_fullbody.xml
+├── sample_video.mp4
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Install Required Libraries
+
+```bash
+pip install opencv-python numpy
+```
+
+### 2️⃣ Download Haar Cascade File
+
+Download from OpenCV official repository:
+
+[https://github.com/opencv/opencv/tree/master/data/haarcascades](https://github.com/opencv/opencv/tree/master/data/haarcascades)
+
+Download:
+
+```
+haarcascade_fullbody.xml
+```
+
+Place it inside your project folder.
+
+---
+
+## ▶️ How to Run
+
+Update the video path inside the script:
+
+```python
+video_path = "sample_video.mp4"
+```
+
+Run the project:
+
+```bash
+python pedestrian_detection.py
+```
+
+Press **Enter key** to stop execution.
+
+---
+
+## 🔍 Detection Parameters
+
+```python
+scaleFactor = 1.2
+minNeighbors = 3
+minSize = (50, 50)
+```
+
+* **scaleFactor** → Controls scaling of detection window
+* **minNeighbors** → Reduces false positives
+* **minSize** → Minimum body size to detect
+
+---
+
+## 🎯 Key Features
+
+✔ Detects multiple pedestrians in video
+✔ Real-time frame processing
+✔ Error handling for invalid paths
+✔ Lightweight implementation
+✔ Beginner-friendly project
+
+---
+
+## 💡 Applications
+
+* Smart surveillance systems
+* Crowd monitoring
+* Traffic analysis
+* Security systems
+* Preprocessing for advanced tracking systems
+
+---
+
+## 🚀 Future Enhancements
+
+* Real-time webcam pedestrian detection
+* Pedestrian tracking
+* Vehicle + pedestrian combined detection
+* Deep Learning-based detection (YOLO / SSD / DNN)
+* Crowd density estimation
+
+---
+
+## 👩‍💻 Author
+
+**Ashley**
+Aspiring AI / ML Engineer
+Interested in Computer Vision & Deep Learning
+
+---
